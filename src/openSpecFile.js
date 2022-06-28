@@ -39,7 +39,7 @@ exports.openSpecFile = (type, filename) => {
       ? { command: commandForRun, arg: `--spec "${relativePath}"` }
       : {
           command: commandForOpen,
-          arg: `--config testFiles="${absolutePath}"`
+          arg: `--config specPattern="${absolutePath}"`
         };
   terminal.sendText(`${exec.command} ${exec.arg}`);
 };
